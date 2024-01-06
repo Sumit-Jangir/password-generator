@@ -12,14 +12,12 @@ const generateBtn = document.querySelector(".generateButton");
 const allCheckBox = document.querySelectorAll("input[type=checkbox]");
 const symbols = `!@#$%^&*](}[){;:'"/?+~<.>,\|-`;
 
-//initially
 let password = "";
 let passwordLength = 10;
 let checkCount = 0;
 handleSlider();
 setIndicator("#ccc");
 
-//set passwordLength
 function handleSlider() {
     inputSlider.value = passwordLength;
     lengthDisplay.innerText = passwordLength;
@@ -85,7 +83,7 @@ async function copyContent() {
     catch (e) {
         copyMsg.innerText = "Failed";
     }
-    //to make copy wala span visible
+
     copyMsg.classList.add("active");
 
     setTimeout(() => {
@@ -95,7 +93,6 @@ async function copyContent() {
 }
 
 function shufflePassword(array) {
-    //Fisher Yates Method
     for (let i = array.length - 1; i > 0; i--) {
         //random J, find out using random function
         const j = Math.floor(Math.random() * (i + 1));
